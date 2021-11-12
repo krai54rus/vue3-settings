@@ -1,0 +1,15 @@
+.*.swp
+.idea
+.vscode
+node_modules/
+yarn.lock
+*.log
+dist/
+docs/
+
+# local env files
+.env.local
+.env.*.local
+
+webapp/
+coverage/
