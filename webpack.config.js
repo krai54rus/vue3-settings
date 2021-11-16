@@ -69,6 +69,20 @@ module.exports = {
                 use: ['vue-loader']
             },
             {
+                test : /\.ts$/,
+                
+                use: [
+                  'babel-loader',
+                  {
+                    loader: 'ts-loader',
+      
+                    options: {
+                      appendTsSuffixTo: [/\.vue$/],
+                    },
+                  },
+                ],
+              },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
