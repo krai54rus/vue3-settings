@@ -25,7 +25,7 @@ const optimization = () => {
 };
 module.exports = {
     mode: 'development',//development environment, production mode
-    entry: './src/index.js',//Import file
+    entry: './src/index.ts',//Import file
     output: {
         filename: '[name].[contenthash].js',// output file
         path: path.resolve(__dirname, 'dist'),// Storage address of output file
@@ -33,7 +33,8 @@ module.exports = {
     resolve: {
         extensions: ['.vue', '.ts', '.js', '.jsx', '.json'], //It means that the file suffix can not be written in the import file
         alias: {
-            '@': path.join(__dirname, 'src')
+            '@': path.join(__dirname, 'src'),
+            types: path.join(__dirname, 'types/'),
             //When the import file is in src, it can be written as @ / component /
         }
     },

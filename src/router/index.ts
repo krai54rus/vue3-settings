@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import store from '../store'
+import App from '@/App.vue'
 
 const routes = [
 //   {
@@ -10,7 +10,7 @@ const routes = [
   {
     path: '/',
     name: 'Index',
-    component: () => import(/* webpackChunkName: "about" */ '@/App.vue')
+    component: App,
   },
   {
     // If the routing configuration '*' reports an error, replace it with '/: catchAll(. *)'
